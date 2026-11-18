@@ -1,0 +1,42 @@
+name: Atualizar perfil
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # todo dia, 03:17 no horário de Brasília
+  workflow_dispatch:        # botão "Run workflow" na aba Actions
+  push:
+    paths:
+      - ".github/scripts/gerar_perfil.py"
+      - ".github/workflows/atualizar-perfil.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Gerar projetos, estatísticas e contribuições
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: python .github/scripts/gerar_perfil.py --out assets
+
+      - name: Salvar mudanças
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          if git diff --cached --quiet; then
+            echo "Sem mudanças para salvar."
+          else
+            git commit -m "chore: atualiza estatísticas do perfil"
+            git push
+          fi
