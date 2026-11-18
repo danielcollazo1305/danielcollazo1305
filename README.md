@@ -1,5 +1,5 @@
-﻿<div align="center">
-  <img src="assets/header.svg" alt="Terminal: Daniel Collazo — Mobile, Back-end, Saúde e Fitness" width="100%">
+<div align="center">
+  <img src="assets/header.svg" alt="Terminal: Daniel Collazo — Full Stack, IA aplicada, Saúde e Fitness" width="100%">
 </div>
 
 <p align="center">
@@ -18,15 +18,15 @@
 
 Sou estudante de Engenharia de Software (Anhanguera) e construo o **Tryv Fit**, um app iOS de treino e saúde, do aplicativo ao servidor: interface em React Native, backend em FastAPI e PostgreSQL, e integração com o Apple Saúde.
 
-Gosto de transformar dados do dia a dia (sono, frequência cardíaca, treino) em algo que a pessoa entende e usa.
+Gosto de transformar dados do dia a dia (sono, frequência cardíaca, treino) em algo que a pessoa entende e usa, inclusive com IA: o app gera treinos com apoio de um modelo de linguagem.
 
 Trabalho com apoio de assistentes de IA (Claude Code): eu defino o que entra, reviso e testo no aparelho.
 
 **Atualmente**
 
 - Preparando o Tryv Fit para a App Store (versões de teste no TestFlight).
-- Construindo as APIs de treino e de sono.
-- Aberto a oportunidades como desenvolvedor júnior.
+- Construindo as APIs de treino e de sono e estudando LLMs.
+- Aberto a estágio e vagas júnior em full stack, back-end com Python e IA aplicada.
 
 <br clear="right">
 
@@ -65,4 +65,3 @@ Trabalho com apoio de assistentes de IA (Claude Code): eu defino o que entra, re
 <br>
 
 <img src="assets/rodape.svg" alt="Obrigado pela visita" width="100%">
-
